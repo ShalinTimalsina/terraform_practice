@@ -1,0 +1,58 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(to right, #d4fc79, #96e6a1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 380px;
+}
+
+/* Heading */
+.card h1 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+/* Text */
+.card p {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Tag */
+.tag {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 20px;
+  font-size: 14px;
+}
