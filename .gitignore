@@ -24,3 +24,5 @@ override.tf.json
 # CLI config files
 terraform.rc
 .terraformrc
+
+.vscode
