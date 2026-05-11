@@ -1,3 +1,13 @@
+# Static Website Hosting Checklist 
+
+# Provider Configuration: Specify the AWS and Random Provider.
+# Bucket Creation  : Create a S3 bucket with a unique name.
+# Public Access : Configure Public Access to the Bucket.
+# Website Configuration : Sets up the bucket for static website hosting.
+# File Uploads: Uploads the index.html and error.html files to the bucket.
+# Website Endpoint: Outputs the URL.
+
+
 resource "random_id" "s3_bucket_random_value" {
   byte_length = 4
 
