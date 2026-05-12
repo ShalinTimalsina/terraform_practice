@@ -57,3 +57,4 @@ resource "aws_route_table_association" "public_route" {
     subnet_id = aws_subnet.practice_public_subnet.id    
 }
 
+
