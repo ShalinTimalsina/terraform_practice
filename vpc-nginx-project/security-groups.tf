@@ -12,6 +12,14 @@ resource "aws_security_group" "webserver_sg" {
     cidr_blocks = ["0.0.0.0/0"]
 
   }
+  # SSH Access
+  ingress {
+    to_port = 22
+    from_port = 22
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   # Outbound Rule
   egress {
     from_port   = 0
