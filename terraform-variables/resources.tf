@@ -8,6 +8,11 @@ resource "aws_instance" "ec2_instance" {
     volume_type           = var.ec2_config.volume_type
   }
   tags = {
-    Name = "practice_server"
+    Name = local.name
   }
+}
+
+locals {
+  owner = "Shalin"
+  name = "My-Server"
 }
