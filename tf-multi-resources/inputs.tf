@@ -8,14 +8,14 @@ variable "subnet_count" {
   type = number
  }
 
-# variable "instance_count" {
-#   description = "This is the number of ec2 instances"
-#   default = 4
-#   type = number
+variable "instance_count" {
+  description = "This is the number of ec2 instances"
+  default = 4
+  type = number
 
-# }
+}
 # variable "ami" {
-#   default =  "ami-091138d0f0d41ff90"
+#   default =  "  "
 
 # }
 
@@ -27,4 +27,13 @@ variable "ec2_config" {
     instance_type = string
   }))
   
+}
+
+
+variable "ec2_map" {
+  
+  type = map(object({
+    ami = string 
+    instance_type = string
+  }))
 }

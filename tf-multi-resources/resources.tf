@@ -43,11 +43,11 @@ resource "aws_subnet" "main_subnet" {
 
 resource "aws_instance" "task_3" {
   
-  count = length(var.ec2_config)
-  ami = var.ec2_config[count.index].ami
-  instance_type = var.ec2_config[count.index].instance_type
-  subnet_id = element(aws_subnet.main_subnet[*].id , count.index % length(aws_subnet.main_subnet))
+  for_each = var.ec2_map 
+  ami = each.value.ami
+  instance_type = each.value.instance_type
+  subnet_id = element(aws_subnet.main_subnet[*].id, index(keys(var.ec2_map), each.key) % length(aws_subnet.main_subnet))
   tags = {
-    Name = "${local.project}-instance-${count.index}" 
+    Name = "${local.project}-instance-${each.key}" 
   }
 }
